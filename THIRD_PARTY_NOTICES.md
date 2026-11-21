@@ -6,5 +6,5 @@
 - The text outline assets derive from font material covered by [motto-font-OFL.txt](inc/motto-font-OFL.txt).
 - The menu icon notices and Simple Icons attribution are in [NOTICE.txt](assets/images/menu-icons/NOTICE.txt).
 - The country flag artwork includes the [flag-icons license](assets/images/flags/LICENSE.txt).
-- The browser and platform artwork from theSVG includes its [license](assets/demo/the-svg/LICENSE) and [trademark guidelines](assets/demo/the-svg/TRADEMARK.md).
+- The browser and platform artwork from theSVG includes its [license](assets/icons/LICENSE) and [trademark guidelines](assets/icons/TRADEMARK.md).
 - The bundled highlight.js code includes the library's license in the generated JavaScript.

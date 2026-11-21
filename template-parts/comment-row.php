@@ -105,11 +105,11 @@ $floor_label = $args['floor'] ? sprintf( __( 'Comment #%s', 'glaze' ), $floor ) 
 									</svg>
 								</span>
 							<?php elseif ( 'apple' === $device['icon'] ) : ?>
-								<img class="comment-device-apple-light" src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/demo/the-svg/apple/light.svg' ) ); ?>" width="16" height="16" alt="<?php echo esc_attr( $device['label'] ); ?>" loading="lazy" decoding="async">
-								<img class="comment-device-apple-dark" src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/demo/the-svg/apple/dark.svg' ) ); ?>" width="16" height="16" alt="<?php echo esc_attr( $device['label'] ); ?>" loading="lazy" decoding="async">
+								<img class="comment-device-apple-light" src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/icons/apple-light.svg' ) ); ?>" width="16" height="16" alt="<?php echo esc_attr( $device['label'] ); ?>" loading="lazy" decoding="async">
+								<img class="comment-device-apple-dark" src="<?php echo esc_url( get_parent_theme_file_uri( 'assets/icons/apple-dark.svg' ) ); ?>" width="16" height="16" alt="<?php echo esc_attr( $device['label'] ); ?>" loading="lazy" decoding="async">
 							<?php elseif ( $device['icon'] ) : ?>
 								<?php
-								$icon_path = 'google-chrome' === $device['icon'] ? 'assets/images/comment-client/chrome.svg' : 'assets/demo/the-svg/' . $device['icon'] . '/default.svg';
+								$icon_path = 'google-chrome' === $device['icon'] ? 'assets/icons/google-chrome-comment.svg' : 'assets/icons/' . $device['icon'] . '.svg';
 								?>
 								<img src="<?php echo esc_url( get_parent_theme_file_uri( $icon_path ) ); ?>" width="16" height="16" alt="<?php echo esc_attr( $device['label'] ); ?>" loading="lazy" decoding="async">
 							<?php else : ?>

@@ -28,6 +28,7 @@ try {
     'assets/css/wide-dock.css',
     'assets/css/wide-rails.css',
     'assets/css/wordpress',
+    'assets/icons',
     'assets/images',
     'assets/fonts',
   ];
