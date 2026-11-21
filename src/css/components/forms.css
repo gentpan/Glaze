@@ -1,0 +1,54 @@
+.search-form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	gap: 0.5rem;
+}
+
+.search-field,
+.comment-form input:not([type="submit"], [type="checkbox"], [type="hidden"]),
+.comment-form textarea,
+.post-password-form input[type="password"] {
+	min-height: 2.5rem;
+	padding: 0.55rem 0.75rem;
+	border: 1px solid var(--glaze-border);
+	color: var(--glaze-text);
+	background: var(--glaze-background);
+}
+
+.search-field {
+	flex: 1 1 8.5rem;
+	min-width: 0;
+}
+
+.search-field::placeholder {
+	color: var(--glaze-muted);
+	opacity: 1;
+}
+
+.search-field:focus,
+.glaze-comment-field > input:focus,
+.post-password-form input[type="password"]:focus,
+.glaze-login-form :is(input[type="text"], input[type="password"]):focus {
+	border-color: var(--glaze-accent);
+	outline: none;
+}
+
+.search-submit,
+.comment-form .submit,
+.post-password-form input[type="submit"] {
+	min-height: 2.5rem;
+	padding: 0.45rem 0.9rem;
+	border: 1px solid var(--glaze-accent);
+	color: var(--glaze-button-text);
+	background: var(--glaze-accent);
+	font-size: 0.875rem;
+	font-weight: 650;
+	cursor: pointer;
+}
+
+.search-submit:hover,
+.comment-form .submit:hover,
+.post-password-form input[type="submit"]:hover {
+	background: color-mix(in srgb, var(--glaze-accent) 90%, var(--glaze-text));
+}

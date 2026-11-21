@@ -1,0 +1,52 @@
+.comment-form .glaze-comment-submit {
+	position: relative;
+	color: #fff;
+}
+
+.glaze-comment-submit-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	white-space: nowrap;
+}
+
+.glaze-comment-submit-label svg {
+	inline-size: 1rem;
+	block-size: 1rem;
+	flex: none;
+}
+
+.comment-form .glaze-comment-submit[aria-busy="true"] {
+	cursor: wait;
+}
+
+.glaze-comment-submit[aria-busy="true"] .glaze-comment-submit-label {
+	opacity: 0;
+}
+
+.glaze-comment-submit-spinner {
+	display: none;
+	position: absolute;
+	inset: 0;
+	width: 18px;
+	height: 18px;
+	margin: auto;
+	border: 2px solid color-mix(in srgb, currentColor 32%, transparent);
+	border-top-color: currentColor;
+	border-radius: 50%;
+}
+
+.glaze-comment-submit[aria-busy="true"] .glaze-comment-submit-spinner {
+	display: block;
+	animation: glaze-comment-submit-spin 720ms linear infinite;
+}
+
+@keyframes glaze-comment-submit-spin {
+	to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.glaze-comment-submit[aria-busy="true"] .glaze-comment-submit-spinner {
+		animation: none;
+	}
+}

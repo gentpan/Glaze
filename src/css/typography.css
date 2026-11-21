@@ -1,0 +1,17 @@
+body {
+	--glaze-site-font: var(--glaze-site-latin,) var(--glaze-site-chinese,) var(--glaze-system-font);
+}
+
+.glaze-entry-font {
+	--glaze-entry-font: var(--glaze-entry-latin,) var(--glaze-entry-chinese,) var(--glaze-system-font);
+}
+
+.glaze-font-site-latin-noto-sans { --glaze-site-latin: "Noto Sans",; }
+.glaze-font-site-latin-agrave-pro { --glaze-site-latin: "Agrave Pro",; }
+.glaze-font-site-chinese-noto-sans-sc { --glaze-site-chinese: "Noto Sans SC",; }
+.glaze-font-site-chinese-noto-serif-sc { --glaze-site-chinese: "Noto Serif SC",; }
+
+.glaze-font-entry-latin-noto-sans { --glaze-entry-latin: "Noto Sans",; }
+.glaze-font-entry-latin-agrave-pro { --glaze-entry-latin: "Agrave Pro",; }
+.glaze-font-entry-chinese-noto-sans-sc { --glaze-entry-chinese: "Noto Sans SC",; }
+.glaze-font-entry-chinese-noto-serif-sc { --glaze-entry-chinese: "Noto Serif SC",; }

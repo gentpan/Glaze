@@ -1,0 +1,99 @@
+.entry-main:has(> .entry-reading-controls:not([hidden])) {
+	--glaze-reading-rail-width: 2.125rem;
+	--glaze-reading-rail-gap: 0.6rem;
+	--glaze-reading-rail-outset: clamp(
+		0.75rem,
+		calc((100vw - var(--glaze-content-width)) / 2),
+		calc(var(--glaze-panel-padding) + var(--glaze-reading-rail-width) + var(--glaze-reading-rail-gap))
+	);
+	display: grid;
+	grid-template-columns: max(0px, calc(var(--glaze-reading-rail-width) + var(--glaze-reading-rail-gap) - var(--glaze-reading-rail-outset))) minmax(0, 1fr);
+}
+
+.entry-reading-controls:not([hidden]) ~ :is(.entry-content, .entry-footer) {
+	grid-column: 2;
+	min-inline-size: 0;
+}
+
+.entry-reading-controls:not([hidden]) ~ .entry-content {
+	grid-row: 1;
+}
+
+.entry-reading-controls {
+	--sq-r: 12px;
+	position: sticky;
+	z-index: 8;
+	inset-block-start: max(0.75rem, calc(43dvh - 3.25rem));
+	display: flex;
+	flex-direction: column;
+	grid-area: 1 / 1;
+	align-self: start;
+	gap: 0.125rem;
+	inline-size: var(--glaze-reading-rail-width);
+	margin-inline-start: calc(-1 * var(--glaze-reading-rail-outset));
+	padding: 0.125rem;
+	border: 1px solid var(--glaze-border);
+	background: var(--glaze-panel);
+	box-shadow: 0 0.25rem 0.8rem var(--glaze-shadow);
+}
+
+.entry-reading-size {
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+}
+
+.entry-reading-controls button {
+	--sq-r: 9px;
+	display: grid;
+	min-block-size: 1.875rem;
+	place-items: center;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--glaze-muted);
+	font-size: 0.6875rem;
+	font-weight: 600;
+}
+
+.entry-reading-controls button:is(:hover:not(:disabled), [aria-pressed="true"]) {
+	color: var(--glaze-link);
+	background: var(--glaze-accent-fill);
+}
+
+.entry-reading-controls button:focus-visible {
+	outline-offset: -1px;
+}
+
+.entry-reading-controls button:disabled {
+	opacity: 0.45;
+	cursor: default;
+}
+
+@media (pointer: coarse) {
+	.entry-main:has(> .entry-reading-controls:not([hidden])) { --glaze-reading-rail-width: 2.25rem; }
+	.entry-reading-controls button { min-block-size: 2.125rem; }
+}
+
+.entry-reading-veil {
+	--glaze-reading-edge: color-mix(in srgb, var(--glaze-panel) 80%, transparent);
+	--glaze-reading-band-radius: max(7%, 1.75rem);
+	position: fixed;
+	z-index: 2;
+	top: var(--glaze-reading-viewport-top, 0px);
+	inset-inline: 0;
+	height: var(--glaze-reading-viewport-height, 100vh);
+	background: linear-gradient(
+		to bottom,
+		var(--glaze-reading-edge) 10%,
+		transparent calc(43% - var(--glaze-reading-band-radius)),
+		transparent calc(43% + var(--glaze-reading-band-radius)),
+		var(--glaze-reading-edge) 90%
+	);
+	pointer-events: none;
+}
+
+@media (forced-colors: active) {
+	.entry-reading-toggle,
+	.entry-reading-veil { display: none; }
+}

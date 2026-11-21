@@ -1,0 +1,117 @@
+:root {
+	--glaze-system-font: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+	--glaze-radius: 0.75rem;
+	--glaze-panel-padding: clamp(1rem, 3vw, 2rem);
+	--glaze-link-hover: color-mix(in srgb, var(--glaze-link) 76%, var(--glaze-text));
+	background: var(--glaze-background);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	color: var(--glaze-text);
+	background: var(--glaze-background);
+	font-family: var(--glaze-site-font, var(--glaze-system-font));
+	line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.35;
+}
+
+a {
+	color: var(--glaze-link);
+}
+
+body a:any-link {
+	text-decoration: none !important;
+}
+
+a:hover {
+	color: var(--glaze-link-hover);
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button,
+summary,
+select {
+	cursor: pointer;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+:focus-visible {
+	outline: 2px solid var(--glaze-accent);
+	outline-offset: 3px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.glaze-panel {
+	border: 1px solid var(--glaze-panel-border);
+	background: var(--glaze-panel);
+}
+
+.control-button {
+	display: inline-flex;
+	min-height: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+	padding: 0.4rem 0.8rem;
+	border: 1px solid var(--glaze-border);
+	color: var(--glaze-text);
+	background: var(--glaze-surface);
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.3;
+	text-align: center;
+	text-decoration: none;
+}
+
+.control-button:hover {
+	border-color: var(--glaze-accent);
+	background: var(--glaze-accent-fill);
+}
+
+.skip-link:focus {
+	position: fixed;
+	z-index: 20;
+	inset-block-start: 1rem;
+	inset-inline-start: 1rem;
+	padding: 0.5rem 0.75rem;
+	color: var(--glaze-button-text);
+	background: var(--glaze-accent);
+}
+
+.screen-reader-text:not(:focus) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	clip-path: inset(50%);
+	overflow: hidden;
+	white-space: nowrap;
+}

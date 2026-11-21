@@ -1,0 +1,89 @@
+:root:is([data-glaze-background="ripples"], [data-glaze-background="blue-preview"][data-glaze-palette="blue"]) body {
+	isolation: isolate;
+	--glaze-ripples-display: block;
+}
+
+.glaze-light-ripples {
+	--glaze-ripple-ink: color-mix(in srgb, var(--glaze-accent-middle) 66%, var(--glaze-accent-ink));
+	--glaze-ripple-line: color-mix(in srgb, var(--glaze-ripple-ink) 22%, transparent);
+	--glaze-ripple-glow: color-mix(in srgb, var(--glaze-ripple-ink) 11%, transparent);
+	--glaze-ripple-glint: color-mix(in srgb, var(--glaze-ripple-ink) 40%, transparent);
+	position: fixed;
+	z-index: -1;
+	inset: 0;
+	display: var(--glaze-ripples-display, none);
+	overflow: hidden;
+	pointer-events: none;
+	background:
+		radial-gradient(ellipse min(24vw, 340px) 28vh at 96% 39%, var(--glaze-ripple-glow), transparent 100%),
+		radial-gradient(ellipse min(16vw, 235px) 20vh at 0 4%, var(--glaze-ripple-glow), transparent 100%);
+}
+
+:root[data-glaze-scheme="dark"] .glaze-light-ripples {
+	--glaze-ripple-line: color-mix(in srgb, var(--glaze-ripple-ink) 30%, transparent);
+	--glaze-ripple-glint: color-mix(in srgb, var(--glaze-ripple-ink) 48%, transparent);
+}
+
+.glaze-light-ripples::before,
+.glaze-light-ripples::after {
+	position: absolute;
+	width: clamp(12rem, 31vw, 29rem);
+	aspect-ratio: 1;
+	content: "";
+	background:
+		radial-gradient(circle at 22% 59%, var(--glaze-ripple-glint) 0 1px, transparent 2.6px),
+		radial-gradient(circle at 36% 69%, var(--glaze-ripple-glint) 0 1.2px, transparent 2.8px),
+		repeating-radial-gradient(ellipse 45% 29% at 58% 52%, transparent 0 12px, var(--glaze-ripple-line) 13px, transparent 14px);
+	mask-image: radial-gradient(ellipse at 56% 50%, transparent 12%, #000 37%, transparent 71%);
+	rotate: var(--glaze-ripple-angle);
+	animation: glaze-ripple-drift 24s ease-in-out infinite alternate;
+}
+
+.glaze-light-ripples::before {
+	--glaze-ripple-angle: 21deg;
+	width: clamp(10rem, 24vw, 22rem);
+	top: -14%;
+	left: -10%;
+	opacity: 0.68;
+	animation-delay: -12s;
+}
+
+.glaze-light-ripples::after {
+	--glaze-ripple-angle: -28deg;
+	top: 16%;
+	right: -12%;
+	animation-delay: -5s;
+}
+
+@keyframes glaze-ripple-drift {
+	from { transform: translate(-3px, -2px) scale(0.97); }
+	to { transform: translate(3px, 2px) scale(1.04); }
+}
+
+@media (max-width: 600px) {
+	.glaze-light-ripples {
+		opacity: 0.8;
+	}
+
+	.glaze-light-ripples::before {
+		top: -8%;
+		left: -20%;
+	}
+
+	.glaze-light-ripples::after {
+		right: -35%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.glaze-light-ripples::before,
+	.glaze-light-ripples::after {
+		animation: none;
+	}
+}
+
+@media print {
+	.glaze-light-ripples {
+		display: none;
+	}
+}

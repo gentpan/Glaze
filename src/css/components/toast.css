@@ -1,0 +1,111 @@
+@font-face {
+	font-family: "Glaze Toast Icons";
+	src: url("../fonts/toast-icons.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 900;
+	font-display: block;
+}
+
+.glaze-toast-stack {
+	position: fixed;
+	z-index: 1100;
+	right: env(safe-area-inset-right, 0px);
+	bottom: env(safe-area-inset-bottom, 0px);
+	pointer-events: none;
+}
+
+/* The authorized 2025.gaicas.com reference uses this material in every appearance. */
+.glaze-toast {
+	--toast-ink: #65798f;
+	--toast-tint: #0070f54d;
+	position: relative;
+	display: block;
+	width: min(230px, calc(100vw - 32px));
+	margin: 16px 10px;
+	padding: 1em;
+	appearance: none;
+	border: 0;
+	border-radius: 0.5em;
+	color: var(--toast-ink);
+	background-color: #fff6;
+	background-image:
+		linear-gradient(#fff, rgb(255 255 255 / 0.65) 12px, rgb(255 255 255 / 0.53) 12px, rgb(255 255 255 / 0.8)),
+		linear-gradient(-90deg, transparent, var(--toast-tint));
+	box-shadow: 0 0 0 1px #fffc inset, 0 0 1px #0000001a, 0 8px 10px #00000026;
+	-webkit-backdrop-filter: blur(3px) brightness(60%) saturate(600%);
+	backdrop-filter: blur(3px) brightness(60%) saturate(600%);
+	font: 400 16px / 1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	text-align: left;
+	pointer-events: auto;
+	transform-origin: right bottom;
+	transition: transform 750ms cubic-bezier(0.4, 1.5, 0.5, 1), opacity 500ms ease;
+}
+
+.glaze-toast[data-type="success"] {
+	--toast-ink: #329700;
+	--toast-tint: #32970040;
+}
+
+.glaze-toast[data-type="warning"] {
+	--toast-ink: #d58814;
+	--toast-tint: #f0900040;
+}
+
+.glaze-toast[data-type="error"] {
+	--toast-ink: #f04646;
+	--toast-tint: #ff222240;
+}
+
+.glaze-toast-icon {
+	position: absolute;
+	top: -10px;
+	left: -12px;
+	display: flex;
+	width: 26px;
+	height: 26px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: #fff linear-gradient(#fff, var(--toast-tint));
+	box-shadow: 0 5px 8px var(--toast-tint), 0 0 0 1px #ffffff80 inset;
+	font: 900 14px / 1 "Glaze Toast Icons";
+	transform-origin: right bottom;
+	transition: transform 600ms cubic-bezier(0.4, 2, 0.5, 1) 300ms;
+}
+
+.glaze-toast-message {
+	display: block;
+	line-height: 1.5;
+	text-shadow: 0 1px #ffffffb3;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	transition: transform 600ms cubic-bezier(0.5, 2, 0.5, 1) 400ms, opacity 500ms ease 400ms;
+}
+
+.glaze-toast:is(.is-entering, .is-leaving) {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.glaze-toast.is-entering .glaze-toast-icon {
+	transform: translateX(20px) scale(0);
+}
+
+.glaze-toast.is-entering .glaze-toast-message {
+	opacity: 0;
+	transform: translateY(1em);
+}
+
+.glaze-toast.is-leaving {
+	pointer-events: none;
+	transition: transform 750ms ease, opacity 750ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.glaze-toast,
+	.glaze-toast-icon,
+	.glaze-toast-message,
+	.glaze-toast.is-leaving {
+		transition: none;
+	}
+}

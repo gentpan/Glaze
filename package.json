@@ -1,0 +1,16 @@
+{
+  "name": "westnote-glaze",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "dev": "node tools/build.mjs --watch",
+    "package": "npm run build && node tools/package.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "dependencies": {
+    "highlight.js": "11.12.0"
+  }
+}

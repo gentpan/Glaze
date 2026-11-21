@@ -1,0 +1,1133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Glaze 0.0.1\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Primary Navigation"
+msgstr "主导航"
+
+msgid "Footer Navigation"
+msgstr "页脚导航"
+
+msgid "Primary navigation"
+msgstr "主导航"
+
+msgid "Footer navigation"
+msgstr "页脚导航"
+
+msgid "Fonts"
+msgstr "字体"
+
+msgid "Site Chinese font"
+msgstr "全站中文字体"
+
+msgid "Site Latin font"
+msgstr "全站英文字体"
+
+msgid "Content Chinese font"
+msgstr "正文中文字体"
+
+msgid "Content Latin font"
+msgstr "正文英文字体"
+
+msgid "Follow site setting"
+msgstr "跟随全站设置"
+
+msgid "System font"
+msgstr "系统字体"
+
+msgid "Follow Chinese font"
+msgstr "跟随中文字体"
+
+msgid "Noto Sans SC (Source Han Sans)"
+msgstr "思源黑体（Noto Sans SC）"
+
+msgid "Noto Serif SC (Source Han Serif)"
+msgstr "思源宋体（Noto Serif SC）"
+
+msgid "Content fonts apply to the body of posts and pages. Web fonts are loaded from Google Fonts."
+msgstr "正文字体适用于文章和页面的正文。网络字体由 Google Fonts 提供。"
+
+msgid "Home"
+msgstr "首页"
+
+msgid "Skip to content"
+msgstr "跳到正文"
+
+msgid "Search"
+msgstr "搜索"
+
+msgid "Header search"
+msgstr "页眉搜索"
+
+msgid "Sidebar search"
+msgstr "侧栏搜索"
+
+msgid "Search the site"
+msgstr "站内搜索"
+
+msgid "Search query"
+msgstr "搜索关键词"
+
+msgid "Search posts…"
+msgstr "搜索文章…"
+
+msgid "Enter an article keyword"
+msgstr "输入文章关键词"
+
+msgid "Focus article search"
+msgstr "聚焦文章搜索"
+
+msgid "Blog"
+msgstr "博客"
+
+msgid "Posts"
+msgstr "文章"
+
+msgid "Latest posts"
+msgstr "最新文章"
+
+msgid "Untitled"
+msgstr "无标题"
+
+msgid "Previous post"
+msgstr "上一篇"
+
+msgid "Next post"
+msgstr "下一篇"
+
+msgid "No older article"
+msgstr "没有更早的文章"
+
+msgid "No newer article"
+msgstr "没有更新的文章"
+
+msgid "Pages:"
+msgstr "分页"
+
+msgid "Copy link"
+msgstr "复制链接"
+
+msgid "Article link copied"
+msgstr "文章链接已复制"
+
+msgid "Could not copy the link. You can copy it from the address bar."
+msgstr "无法复制链接，请从地址栏复制。"
+
+msgid "Dismiss notification"
+msgstr "关闭提示"
+
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s 条评论"
+
+msgid "Discussion"
+msgstr "留言"
+
+msgid "%s thread"
+msgid_plural "%s threads"
+msgstr[0] "%s楼"
+
+msgid "%s contribution"
+msgid_plural "%s contributions"
+msgstr[0] "%s 次参与"
+
+msgctxt "Comment floor watermark"
+msgid "#"
+msgstr "楼"
+
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+msgid "Sidebar"
+msgstr "侧栏"
+
+msgid "Glaze Sidebar"
+msgstr "Glaze 侧栏"
+
+msgid "Find a post"
+msgstr "站内搜索"
+
+msgid "Recent posts"
+msgstr "最近文章"
+
+msgid "Categories"
+msgstr "分类"
+
+msgid "Search results for “%s”"
+msgstr "“%s”的搜索结果"
+
+msgid "Search results"
+msgstr "搜索结果"
+
+msgid "No results. Try a different search term."
+msgstr "未找到结果，试试其他关键词。"
+
+msgid "No posts found."
+msgstr "暂无文章。"
+
+msgid "Page not found"
+msgstr "找不到页面"
+
+msgid "The page may have moved. Search the site or return to the homepage."
+msgstr "这个页面可能已经移动。可以搜索站内内容，或返回首页。"
+
+msgid "Search for a page"
+msgstr "搜索页面"
+
+msgid "Back to home"
+msgstr "返回首页"
+
+msgid "Theme palette"
+msgstr "主题配色"
+
+msgid "Appearance"
+msgstr "外观"
+
+msgid "Light appearance"
+msgstr "浅色外观"
+
+msgid "Dark appearance"
+msgstr "深色外观"
+
+msgid "Dark"
+msgstr "深色"
+
+msgid "Lime"
+msgstr "青柠"
+
+msgid "Mint"
+msgstr "薄荷"
+
+msgid "Celadon"
+msgstr "青瓷"
+
+msgid "Sky blue"
+msgstr "晴蓝"
+
+msgid "Indigo"
+msgstr "靛青"
+
+msgid "Wisteria"
+msgstr "紫藤"
+
+msgid "Blossom"
+msgstr "樱粉"
+
+msgid "Coral"
+msgstr "珊瑚"
+
+msgid "Amber"
+msgstr "琥珀"
+
+msgid "Graphite"
+msgstr "石墨"
+
+msgid "Cinnabar"
+msgstr "朱砂"
+
+msgid "Bamboo"
+msgstr "竹青"
+
+msgid "Autumn ochre"
+msgstr "秋香"
+
+msgid "Lotus mauve"
+msgstr "藕荷"
+
+msgid "Recent comments"
+msgstr "最新评论"
+
+msgid "View comment"
+msgstr "查看评论"
+
+msgid "RSS feed"
+msgstr "RSS 订阅"
+
+msgid "Copy RSS link"
+msgstr "复制 RSS 链接"
+
+msgid "Copy code"
+msgstr "复制代码"
+
+msgid "Code copied"
+msgstr "代码复制成功"
+
+msgid "Could not copy the code."
+msgstr "代码复制失败"
+
+msgid "Collapse code"
+msgstr "收起"
+
+msgid "Expand code"
+msgstr "展开"
+
+msgid "RSS link copied"
+msgstr "RSS 订阅链接已复制"
+
+msgid "Could not copy the RSS link."
+msgstr "无法复制 RSS 订阅链接。"
+
+msgid "Glaze Footer Buttons"
+msgstr "Glaze 页脚按钮"
+
+msgid "Choose a built-in icon or paste a custom SVG, then enter its destination URL."
+msgstr "选择内置图标或粘贴自定义 SVG，填入链接地址后显示按钮。"
+
+msgid "Built-in icon"
+msgstr "内置图标"
+
+msgid "Use custom SVG"
+msgstr "使用自定义 SVG"
+
+msgid "Button %d SVG"
+msgstr "按钮 %d 的 SVG"
+
+msgid "Button %d link"
+msgstr "按钮 %d 的链接"
+
+msgid "Glaze Appearance"
+msgstr "Glaze 外观"
+
+msgid "Default palette"
+msgstr "默认色板"
+
+msgid "Default appearance"
+msgstr "默认外观"
+
+msgid "Page background"
+msgstr "页面背景"
+
+msgid "Light ripples on Sky blue"
+msgstr "仅晴蓝配色显示光纹"
+
+msgid "Light ripples on all palettes"
+msgstr "所有配色显示光纹"
+
+msgid "No background effect"
+msgstr "关闭背景效果"
+
+msgid "Corner style"
+msgstr "圆角样式"
+
+msgid "Square"
+msgstr "直角"
+
+msgid "Squircle"
+msgstr "超椭圆"
+
+msgid "Round"
+msgstr "圆形"
+
+msgid "Notes pagination"
+msgstr "说说分页"
+
+msgid "Feed pagination"
+msgstr "动态分页"
+
+msgid "Publishing activity"
+msgstr "发布热力图"
+
+msgid "Archive year"
+msgstr "归档年份"
+
+msgid "Archive period"
+msgstr "归档时间范围"
+
+msgid "Last 365 days"
+msgstr "最近 365 天"
+
+msgid "%s post"
+msgid_plural "%s posts"
+msgstr[0] "%s 篇文章"
+
+msgid "%1$s · %2$s post"
+msgid_plural "%1$s · %2$s posts"
+msgstr[0] "%1$s · %2$s 篇文章"
+
+msgid "Posts in %s"
+msgstr "%s 年文章"
+
+msgid "No posts were published this year."
+msgstr "这一年还没有发布文章。"
+
+msgid "No posts were published in this period."
+msgstr "这段时间没有发布文章。"
+
+msgid "Posts per day"
+msgstr "每日发布篇数"
+
+msgid "%s category"
+msgid_plural "%s categories"
+msgstr[0] "%s 个分类"
+
+msgid "%s word"
+msgid_plural "%s words"
+msgstr[0] "%s 字"
+
+msgid "%s publishing day"
+msgid_plural "%s publishing days"
+msgstr[0] "更新 %s 天"
+
+msgctxt "archive total"
+msgid "%s view"
+msgid_plural "%s views"
+msgstr[0] "%s 次阅读"
+
+msgid "Less"
+msgstr "少"
+
+msgid "More"
+msgstr "多"
+
+msgid "Loading…"
+msgstr "加载中…"
+
+msgid "Loading page…"
+msgstr "页面加载中…"
+
+msgid "Could not load this year. Try again."
+msgstr "加载失败，请重试。"
+
+msgid "Could not load this period. Try again."
+msgstr "加载失败，请重试。"
+
+msgctxt "heatmap month label date format"
+msgid "M"
+msgstr "n月"
+
+msgctxt "archive month heading date format"
+msgid "F"
+msgstr "n月"
+
+msgctxt "notes month heading date format"
+msgid "F Y"
+msgstr "Y 年 n 月"
+
+msgctxt "note date and time format"
+msgid "M j, H:i"
+msgstr "n 月 j 日 H:i"
+
+msgid "Short note"
+msgstr "说说"
+
+msgid "Add short note"
+msgstr "新增说说"
+
+msgid "Edit short note"
+msgstr "编辑说说"
+
+msgid "Write a short note"
+msgstr "发说说"
+
+msgid "Publish short note"
+msgstr "发布说说"
+
+msgid "Note"
+msgstr "正文"
+
+msgid "Keywords (optional)"
+msgstr "关键词（选填）"
+
+msgid "Separate up to four keywords with commas."
+msgstr "最多 4 个关键词，用逗号分隔。"
+
+msgid "Images (optional)"
+msgstr "图片（选填）"
+
+msgid "Up to four images, %s each."
+msgstr "最多 4 张，每张不超过 %s。"
+
+msgid "You can attach up to four images with upload permission."
+msgstr "有上传权限时，每条说说最多附 4 张图片。"
+
+msgid "An image could not be uploaded. Check its size and try again."
+msgstr "图片上传失败，请检查大小后重试。"
+
+msgid "Choose JPEG, PNG, WebP, or GIF images."
+msgstr "请选择 JPEG、PNG、WebP 或 GIF 图片。"
+
+msgid "You do not have permission to publish short notes."
+msgstr "你没有发布说说的权限。"
+
+msgid "Use up to 4,000 characters and four keywords of up to 20 characters each."
+msgstr "正文最多 4000 字，最多 4 个关键词，每个不超过 20 字。"
+
+msgid "You do not have permission to assign keywords."
+msgstr "你没有添加关键词的权限。"
+
+msgid "This short note is still being saved. Try again in a moment."
+msgstr "这条说说正在保存，请稍后再试。"
+
+msgid "Write something or add an image."
+msgstr "写点什么，或添加一张图片。"
+
+msgid "The short note could not be published. Please try again."
+msgstr "说说未能发布，请重试。"
+
+msgid "An image could not be uploaded. Check its format and try again."
+msgstr "图片上传失败，请检查格式后重试。"
+
+msgid "The form expired or the upload was too large. Please try again."
+msgstr "表单已过期，或上传内容超过了限制。请重试。"
+
+msgid "Save changes"
+msgstr "保存修改"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Add images"
+msgstr "添加图片"
+
+msgid "Remove image"
+msgstr "移除图片"
+
+msgid "What would you like to remember?"
+msgstr "这一刻，想记录什么？"
+
+msgid "This note uses HTML formatting."
+msgstr "这条说说含有 HTML 格式。"
+
+msgid "This short note can have up to four images."
+msgstr "每条说说最多附 4 张图片。"
+
+msgid "Delete this short note?"
+msgstr "删除这条说说？"
+
+msgid "The note will move to the WordPress trash, where it can be restored."
+msgstr "这条说说会移到回收站，可在 WordPress 后台恢复。"
+
+msgid "Move to trash"
+msgstr "移到回收站"
+
+msgid "Short note moved to the trash."
+msgstr "说说已移到回收站。"
+
+msgid "The changes could not be saved. Please try again."
+msgstr "修改未能保存，请重试。"
+
+msgid "You do not have permission to manage this short note."
+msgstr "你没有管理这条说说的权限。"
+
+msgid "This short note changed elsewhere. Reload the page before editing it again."
+msgstr "这条说说已在别处修改。请刷新页面后重新编辑。"
+
+msgid "The request could not be completed. Please try again."
+msgstr "未能完成请求，请重试。"
+
+msgid "The short note could not be moved to the trash."
+msgstr "未能将这条说说移到回收站。"
+
+msgid "Short note keywords"
+msgstr "说说关键词"
+
+msgid "Keyword"
+msgstr "关键词"
+
+msgid "About"
+msgstr "关于"
+
+msgid "Archives"
+msgstr "归档"
+
+msgid "Blogroll"
+msgstr "友情链接"
+
+msgid "RSS"
+msgstr "订阅"
+
+msgid "Gallery"
+msgstr "相册"
+
+msgid "Statistics"
+msgstr "统计"
+
+msgid "Analytics"
+msgstr "分析"
+
+msgid "Tags"
+msgstr "标签"
+
+msgid "Short notes"
+msgstr "说说"
+
+msgid "Guestbook"
+msgstr "留言板"
+
+msgid "Contact"
+msgstr "联系"
+
+msgid "Projects"
+msgstr "项目"
+
+msgid "Bookshelf"
+msgstr "书架"
+
+msgid "Now"
+msgstr "近况"
+
+msgid "Uses"
+msgstr "装备"
+
+msgid "Sitemap"
+msgstr "站点地图"
+
+msgid "Downloads"
+msgstr "下载"
+
+msgid "Videos"
+msgstr "视频"
+
+msgid "Podcast"
+msgstr "播客"
+
+msgid "Portfolio"
+msgstr "作品集"
+
+msgid "Changelog"
+msgstr "更新记录"
+
+msgid "FAQ"
+msgstr "常见问题"
+
+msgid "Privacy"
+msgstr "隐私"
+
+msgid "Terms"
+msgstr "使用条款"
+
+msgid "Support"
+msgstr "支持赞助"
+
+msgid "Newsletter"
+msgstr "邮件通讯"
+
+msgid "Account"
+msgstr "账户"
+
+msgid "Music"
+msgstr "音乐分享"
+
+msgid "Code"
+msgstr "日常代码"
+
+msgid "Life"
+msgstr "生活日常"
+
+msgid "Travel"
+msgstr "旅行游记"
+
+msgid "Miscellany"
+msgstr "杂记"
+
+msgid "Mood"
+msgstr "心情笔记"
+
+msgid "Photography"
+msgstr "摄影"
+
+msgid "Reading"
+msgstr "阅读书摘"
+
+msgid "Film & TV"
+msgstr "影视"
+
+msgid "Games"
+msgstr "游戏"
+
+msgid "Food"
+msgstr "美食"
+
+msgid "Technology"
+msgstr "数码科技"
+
+msgid "Design"
+msgstr "设计"
+
+msgid "Work"
+msgstr "工作"
+
+msgid "Learning"
+msgstr "学习"
+
+msgid "Fitness"
+msgstr "运动健身"
+
+msgid "Outdoors"
+msgstr "自然户外"
+
+msgid "AI"
+msgstr "人工智能"
+
+msgid "Diary"
+msgstr "日记记录"
+
+msgid "Tutorials"
+msgstr "教程经验"
+
+msgid "Sina Weibo"
+msgstr "新浪微博"
+
+msgid "Xiaohongshu"
+msgstr "小红书"
+
+msgid "WeChat"
+msgstr "微信"
+
+msgid "Bilibili"
+msgstr "哔哩哔哩"
+
+msgid "TikTok / Douyin"
+msgstr "TikTok / 抖音"
+
+msgid "Zhihu"
+msgstr "知乎"
+
+msgid "Right-side menu"
+msgstr "右侧菜单"
+
+msgid "Account menu"
+msgstr "账号菜单"
+
+msgid "Write a post"
+msgstr "发文章"
+
+msgid "Manage comments"
+msgstr "管理评论"
+
+msgid "Switch theme"
+msgstr "切换主题"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Log out"
+msgstr "退出登录"
+
+msgid "Log in"
+msgstr "登录"
+
+msgid "Close login"
+msgstr "关闭登录弹窗"
+
+msgid "Username or email"
+msgstr "用户名或邮箱"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Remember me"
+msgstr "记住登录"
+
+msgid "Login failed. Check your username and password and try again."
+msgstr "登录失败，请检查用户名和密码后重试。"
+
+msgid "Unable to reach the login service. Please try again."
+msgstr "暂时无法连接登录服务，请重试。"
+
+msgid "Blog pages"
+msgstr "博客页面"
+
+msgid "Blog categories"
+msgstr "博客分类"
+
+msgid "Social platforms"
+msgstr "社交平台"
+
+msgid "Choose a preset icon"
+msgstr "展开选择预设图标"
+
+msgid "Use the default icon"
+msgstr "沿用页面、分类或默认图标"
+
+msgid "No preset icon"
+msgstr "无图标"
+
+msgid "Glaze Page Icon"
+msgstr "Glaze 页面图标"
+
+msgid "Glaze Category Icon"
+msgstr "Glaze 分类图标"
+
+msgid "Custom SVG icon for the right-side menu"
+msgstr "右侧菜单自定义 SVG 图标"
+
+msgid "Paste a static SVG such as a Font Awesome icon. A custom icon takes precedence over the preset."
+msgstr "粘贴静态 SVG，例如 Font Awesome 图标。自定义图标优先于预设。"
+
+msgid "Glaze Settings"
+msgstr "Glaze 设置"
+
+msgid "Glaze settings saved."
+msgstr "Glaze 设置已保存。"
+
+msgid "Appearance preview"
+msgstr "外观预览"
+
+msgid "Comment avatar style"
+msgstr "评论头像样式"
+
+msgid "Large outside avatar"
+msgstr "外侧大头像"
+
+msgid "Small avatar before the name"
+msgstr "昵称前小头像"
+
+msgid "Site identity"
+msgstr "站点标识"
+
+msgid "Site title"
+msgstr "站点标题"
+
+msgid "Site description"
+msgstr "站点描述"
+
+msgid "Site logo"
+msgstr "站点 Logo"
+
+msgid "Choose logo"
+msgstr "选择 Logo"
+
+msgid "Remove logo"
+msgstr "移除 Logo"
+
+msgid "Page width"
+msgstr "页面宽度"
+
+msgid "Choose 600, 800 or 960 px, or enter any width from 360 to 1600 px. The header, content and footer share this width."
+msgstr "可选 600、800 或 960 px，也可输入 360 至 1600 px 的宽度。页头、内容区和页脚共用此宽度。"
+
+msgid "Menus and icons"
+msgstr "菜单与图标"
+
+msgid "Edit right-side menu"
+msgstr "管理右侧菜单"
+
+msgid "Edit page icons"
+msgstr "管理页面图标"
+
+msgid "Edit category icons"
+msgstr "管理分类图标"
+
+msgid "Button %d"
+msgstr "按钮 %d"
+
+msgid "SVG icon"
+msgstr "SVG 图标"
+
+msgid "Destination URL"
+msgstr "链接地址"
+
+msgid "Subscription updates"
+msgstr "订阅更新"
+
+msgid "Dismiss card"
+msgstr "关闭卡片"
+
+msgid "%s view"
+msgid_plural "%s views"
+msgstr[0] "浏览 %s"
+
+msgid "Enlarge image"
+msgstr "放大图片"
+
+msgid "Close image"
+msgstr "关闭图片"
+
+msgid "Comment sent."
+msgstr "评论已发送"
+
+msgid "Comment sent and awaiting moderation."
+msgstr "评论已发送，等待审核"
+
+msgid "Comment could not be sent."
+msgstr "评论未能发送。"
+
+msgid "Could not confirm whether your comment was sent. Your text is still in the form."
+msgstr "暂时无法确认评论是否送达，输入内容已保留。"
+
+msgid "Your comment was received, but the comment list could not be updated."
+msgstr "评论已收到，列表暂时无法更新。"
+
+msgid "This page of comments could not be loaded."
+msgstr "暂时无法加载这页评论。"
+
+msgid "Commenting as"
+msgstr "当前评论身份"
+
+msgid "Leave a comment"
+msgstr "发表评论"
+
+msgid "Please keep the conversation respectful and free of advertising or spam."
+msgstr "欢迎友善交流，请勿发布广告或垃圾信息。"
+
+#. translators: 1: Number of comments including replies, 2: Number of top-level threads.
+#, php-format
+msgid "Thanks for joining in! %1$s comments across %2$s threads."
+msgstr "感谢各位民工兄弟的 %1$s 次积极参与，%2$s 楼已竣工！"
+
+msgid "Join in?"
+msgstr "盖否？"
+
+msgid "Blog link (optional)"
+msgstr "博客链接（选填）"
+
+msgid "This floor is yours. Write what you would like to say."
+msgstr "这一楼留给你，写下想说的话吧。"
+
+msgid "Insert an emoji"
+msgstr "插入表情"
+
+msgctxt "comment emoji"
+msgid "Happy"
+msgstr "开心"
+
+msgctxt "comment emoji"
+msgid "Tears of joy"
+msgstr "笑哭"
+
+msgctxt "comment emoji"
+msgid "Smile"
+msgstr "微笑"
+
+msgctxt "comment emoji"
+msgid "Heart eyes"
+msgstr "喜欢"
+
+msgctxt "comment emoji"
+msgid "Smiling with hearts"
+msgstr "喜爱"
+
+msgctxt "comment emoji"
+msgid "Cool"
+msgstr "酷"
+
+msgctxt "comment emoji"
+msgid "Thinking"
+msgstr "思考"
+
+msgctxt "comment emoji"
+msgid "Giggle"
+msgstr "偷笑"
+
+msgctxt "comment emoji"
+msgid "Nervous laugh"
+msgstr "汗颜"
+
+msgctxt "comment emoji"
+msgid "Surprised"
+msgstr "惊讶"
+
+msgctxt "comment emoji"
+msgid "Upside down"
+msgstr "倒脸"
+
+msgctxt "comment emoji"
+msgid "Wink"
+msgstr "眨眼"
+
+msgctxt "comment emoji"
+msgid "Holding back tears"
+msgstr "感动"
+
+msgctxt "comment emoji"
+msgid "Crying"
+msgstr "大哭"
+
+msgctxt "comment emoji"
+msgid "Sleepy"
+msgstr "困了"
+
+msgctxt "comment emoji"
+msgid "Star-struck"
+msgstr "崇拜"
+
+msgctxt "comment emoji"
+msgid "Thumbs up"
+msgstr "赞"
+
+msgctxt "comment emoji"
+msgid "Thumbs down"
+msgstr "踩"
+
+msgctxt "comment emoji"
+msgid "OK"
+msgstr "好的"
+
+msgctxt "comment emoji"
+msgid "Flexed biceps"
+msgstr "加油"
+
+msgctxt "comment emoji"
+msgid "Applause"
+msgstr "鼓掌"
+
+msgctxt "comment emoji"
+msgid "Thanks"
+msgstr "感谢"
+
+msgctxt "comment emoji"
+msgid "Heart"
+msgstr "爱心"
+
+msgctxt "comment emoji"
+msgid "Celebration"
+msgstr "礼花"
+
+msgid "Article shortcuts"
+msgstr "文章快捷跳转"
+
+msgid "Back to top"
+msgstr "回到顶部"
+
+msgid "Go to post comments"
+msgstr "前往文章评论区"
+
+msgid "Go to bottom"
+msgstr "前往底部"
+
+msgid "Contents"
+msgstr "目录"
+
+msgid "Article contents"
+msgstr "文章目录"
+
+msgid "Reading focus"
+msgstr "阅读聚焦"
+
+msgid "Article text size"
+msgstr "正文字号"
+
+msgid "Decrease article text size"
+msgstr "减小正文字号"
+
+msgid "Increase article text size"
+msgstr "放大正文字号"
+
+msgid "Close table of contents"
+msgstr "关闭文章目录"
+
+msgid "The server rejected the comment (HTTP %s)."
+msgstr "服务器拒绝了这条评论（HTTP %s）。"
+
+msgid "Unknown browser"
+msgstr "浏览器未知"
+
+msgid "Blogroll link"
+msgstr "博主的友情链接"
+
+msgid "Comment administrator"
+msgstr "管理员"
+
+msgid "Comment details"
+msgstr "评论信息"
+
+msgid "Comment #%s"
+msgstr "第 %s 楼"
+
+msgid "Awaiting moderation"
+msgstr "待审核"
+
+msgctxt "absolute post date format"
+msgid "Y-m-d"
+msgstr "Y年n月j日"
+
+msgid "Just now"
+msgstr "刚刚"
+
+msgid "%s ago"
+msgstr "%s前"
+
+msgctxt "post date and time format"
+msgid "Y-m-d H:i"
+msgstr "Y年n月j日 H:i"
+
+msgid "%s minute ago"
+msgid_plural "%s minutes ago"
+msgstr[0] "%s分钟前"
+
+msgid "%s hour ago"
+msgid_plural "%s hours ago"
+msgstr[0] "%s个小时前"
+
+msgid "%s day ago"
+msgid_plural "%s days ago"
+msgstr[0] "%s天前"
+
+msgid "%s month ago"
+msgid_plural "%s months ago"
+msgstr[0] "%s个月前"
+
+msgid "%s year ago"
+msgid_plural "%s years ago"
+msgstr[0] "%s年前"
+
+msgid "Switch light and dark appearance"
+msgstr "切换深浅色"
+
+msgid "Homepage sidebars"
+msgstr "首页侧边栏"
+
+msgid "Homepage pagination motto"
+msgstr "首页分页寄语"
+
+msgid "Motto text"
+msgstr "寄语文字"
+
+msgid "Save to create a handwritten SVG. Leave blank to hide it."
+msgstr "保存后自动生成手写 SVG。留空则隐藏寄语。"
+
+msgid "Choose what each side shows on the homepage. Each sidebar displays up to five cards."
+msgstr "分别选择首页左右两侧的内容，每侧最多显示五张卡片。"
+
+msgid "Left sidebar"
+msgstr "左侧工具栏"
+
+msgid "Right sidebar"
+msgstr "右侧工具栏"
+
+msgid "Manage blogroll"
+msgstr "管理友情链接"
+
+msgid "Latest short notes"
+msgstr "最新说说"
+
+msgid "Random blogroll"
+msgstr "随机友情链接"
+
+msgid "Hide"
+msgstr "隐藏"
+
+msgid "Photo note"
+msgstr "图片说说"
+
+msgid "Shuffle links"
+msgstr "换一批"
+
+msgid "Links refreshed."
+msgstr "已换一批友情链接。"
+
+msgid "Could not refresh links. Try again."
+msgstr "刷新失败，请重试。"
+
+msgid "No links to show."
+msgstr "暂无友情链接。"
+
+#. translators: %s: Comment author name.
+#, php-format
+msgid "Reply to %s and join the conversation"
+msgstr "接着 %s 的楼，再添砖加瓦"

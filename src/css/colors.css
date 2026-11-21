@@ -1,0 +1,32 @@
+:root {
+	color-scheme: light;
+	--glaze-background: #f0f2f0;
+	--glaze-text: color-mix(in srgb, var(--glaze-accent-ink) 20%, #262626);
+	--glaze-muted: color-mix(in srgb, var(--glaze-accent-ink) 42%, #666);
+	--glaze-search-placeholder: color-mix(in srgb, var(--glaze-accent-ink) 30%, #737373);
+	--glaze-surface: color-mix(in srgb, var(--glaze-accent) 5%, #fafafa);
+	--glaze-hover: color-mix(in srgb, var(--glaze-accent) 11%, #f8f8f8);
+	--glaze-panel: #fff;
+	--glaze-border: color-mix(in srgb, var(--glaze-accent-ink) 10%, #f1f1f1);
+	--glaze-panel-border: transparent;
+	--glaze-highlight: #fff;
+	--glaze-shadow: color-mix(in srgb, var(--glaze-accent-ink) 7%, transparent);
+	--glaze-link: var(--glaze-accent-ink);
+	--glaze-accent-fill: color-mix(in srgb, var(--glaze-accent) 10%, var(--glaze-panel));
+}
+
+:root[data-glaze-scheme="dark"] {
+	color-scheme: dark;
+	--glaze-background: #000;
+	--glaze-text: #f2f2f2;
+	--glaze-muted: color-mix(in srgb, var(--glaze-accent-light) 22%, #aaa);
+	--glaze-search-placeholder: color-mix(in srgb, var(--glaze-accent-light) 16%, #888);
+	--glaze-surface: color-mix(in srgb, var(--glaze-accent) 9%, #1f1f1f);
+	--glaze-hover: color-mix(in srgb, var(--glaze-accent) 14%, #2a2a2a);
+	--glaze-panel: #181818;
+	--glaze-border: color-mix(in srgb, var(--glaze-accent) 12%, #303030);
+	--glaze-highlight: #ffffff24;
+	--glaze-shadow: #00000052;
+	--glaze-link: var(--glaze-accent-light);
+	--glaze-accent-fill: color-mix(in srgb, var(--glaze-accent) 14%, var(--glaze-panel));
+}

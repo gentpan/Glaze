@@ -1,0 +1,25 @@
+import { initDropdown } from './components/dropdown.js';
+import './components/copy-link.js';
+import './components/header-search.js';
+import './components/header-account.js';
+import './components/home-rails.js';
+import './components/tooltip.js';
+import './components/entry-link-preview.js';
+import './components/image-placeholder.js';
+import './components/image-lightbox.js';
+import './components/avatar-group.js';
+import './components/comment-confirmation.js';
+import './components/comment-reply.js';
+import './components/comment-emoji.js';
+import './components/comment-location.js';
+import './components/post-navigation.js';
+import './components/post-shortcuts.js';
+import './components/post-toc.js';
+import './components/reading-focus.js';
+import './components/reading-size.js';
+import './components/presence.js';
+import './components/collection-site-icons.js';
+import './components/page-loading.js';
+
+const palette = document.querySelector('[data-glaze-palette-picker]');
+if (palette) initDropdown(palette);

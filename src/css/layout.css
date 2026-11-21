@@ -1,0 +1,20 @@
+:root {
+	--glaze-content-width: calc(var(--glaze-content-width-hundreds, 600px) + var(--glaze-content-width-remainder, 0px));
+}
+
+.site-header,
+.site-layout,
+.site-footer {
+	width: calc(100% - clamp(1.5rem, 5vw, 3rem));
+	max-width: var(--glaze-content-width);
+	margin-inline: auto;
+}
+
+.site-layout {
+	padding-block: clamp(1.25rem, 3vw, 1.875rem) clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+.site-content {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
