@@ -111,7 +111,7 @@ function westnote_glaze_latest_pageview() {
 	if ( $schema ) {
 		$table   = $wpdb->prefix . 'glaze_pageview_events';
 		$columns = $schema >= 2 ? 'seen, region, country_code' : 'seen, region';
-		$latest  = $wpdb->get_row( "SELECT $columns FROM `{$table}` ORDER BY id DESC LIMIT 1", ARRAY_A );
+		$latest  = $wpdb->get_row( "SELECT $columns FROM `{$table}` WHERE region <> '' ORDER BY id DESC LIMIT 1", ARRAY_A );
 		if ( $latest ) {
 			return $latest;
 		}
@@ -195,12 +195,12 @@ function westnote_glaze_record_pageview( $table, $event, $now ) {
 	}
 
 	wp_cache_delete( 'westnote_glaze_total_pageviews', 'options' );
-	$address  = $_SERVER['P1_CLIENT_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+	$address  = westnote_glaze_visitor_ip( $_SERVER );
 	$location = westnote_glaze_lookup_region( $address, true );
 	if ( $location ) {
 		$metadata = array( 'region' => wp_html_excerpt( westnote_glaze_comment_location_label( $location ), 240 ) );
-		if ( $schema >= 2 && preg_match( '~\Ahttps://flagcdn\.io/flags/1x1/([a-z]{2})\.svg\z~', $location['flag'] ?? '', $flag ) ) {
-			$metadata['country_code'] = $flag[1];
+		if ( $schema >= 2 ) {
+			$metadata['country_code'] = westnote_glaze_location_country_code( $location );
 		}
 		$wpdb->update( $table, $metadata, array( 'event_id' => $event ) );
 	}
