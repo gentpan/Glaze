@@ -1,8 +1,8 @@
 # Glaze
 
-Glaze 是一款经典 WordPress 博客主题，支持明暗模式、多套配色、文章目录、图片灯箱、说说和订阅。
+**[下载 WordPress 安装包 `glaze.zip`](https://github.com/gentpan/Glaze/releases/latest/download/glaze.zip)** · [版本发布](https://github.com/gentpan/Glaze/releases) · [在线演示](https://xifeng.net/)
 
-[查看在线站点](https://xifeng.net/) · [下载 WordPress 安装包](https://github.com/gentpan/Glaze/releases/latest/download/glaze.zip)
+Glaze 是一款经典 WordPress 博客主题，支持明暗模式、多套配色、文章目录、图片灯箱、说说和订阅。
 
 ## 安装
 
@@ -11,6 +11,20 @@ Glaze 是一款经典 WordPress 博客主题，支持明暗模式、多套配色
 3. 在「外观 → 菜单」为主导航分配菜单，然后按需调整 Glaze 设置。
 
 登录有发布权限的账号后，可在说说页直接发布、编辑和删除有权限管理的说说。编辑器支持关键词与配图，删除的说说会移入 WordPress 回收站。
+
+## 界面预览
+
+### [首页](https://xifeng.net/)
+
+[![xifeng.net 首页的文章卡片、摘要和右侧导航](docs/screenshots/home.jpg)](https://xifeng.net/)
+
+### [文章页](https://xifeng.net/2026/10/netfish-bbs/)
+
+[![xifeng.net 文章页的封面、正文和阅读控制](docs/screenshots/article.jpg)](https://xifeng.net/2026/10/netfish-bbs/)
+
+### [说说页](https://xifeng.net/talks/)
+
+[![xifeng.net 说说页按月排列的时间线和关键词](docs/screenshots/talks.jpg)](https://xifeng.net/talks/)
 
 ## 布局与配色
 
@@ -36,6 +50,7 @@ Glaze 是一款经典 WordPress 博客主题，支持明暗模式、多套配色
 | --- | --- | --- |
 | Toast 等全站组件 | `src/js/app.js`，组件按需放入 `src/js/components/` | `assets/js/app.min.js` |
 | 页面专用交互 | `src/js/main.js`，页面模块按需放入 `src/js/pages/` | `assets/js/main.min.js` |
+| 说说编辑器 | `src/js/components/talk-manager.js` | `assets/js/talk-manager.min.js` |
 | CSS | `src/css/`，组件样式按需放入 `src/css/components/`，由前台或后台入口导入 | `assets/css/` |
 | 图片 | `assets/images/` | 原文件 |
 | 字体 | `assets/fonts/` | 原文件 |
