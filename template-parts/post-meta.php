@@ -55,12 +55,12 @@ if ( $is_card ) {
 	<?php endif; ?>
 	<?php if ( $is_card ) : ?>
 		<?php
-		$views = max( 0, (int) get_post_meta( get_the_ID(), 'p1_post_views', true ), (int) get_post_meta( get_the_ID(), '_feng_views', true ) );
+		$views = westnote_glaze_archive_post_views( get_the_ID() );
 		$formatted_views = number_format_i18n( $views );
 		/* translators: %s: localized number of post views. */
 		$views_label = sprintf( _n( '%s view', '%s views', $views, 'glaze' ), $formatted_views );
 		?>
-		<span class="post-card-views">
+		<span class="post-card-views" data-glaze-post-views="<?php echo esc_attr( get_the_ID() ); ?>" data-glaze-view-count="<?php echo esc_attr( $views ); ?>">
 			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2.5 12S6 6 12 6s9.5 6 9.5 6-3.5 6-9.5 6S2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.4"/></svg>
 			<span aria-hidden="true"><?php echo esc_html( $formatted_views ); ?></span>
 			<span class="screen-reader-text"><?php echo esc_html( $views_label ); ?></span>

@@ -4,6 +4,25 @@ const footer = presence?.closest('.site-footer-meta');
 const totalViews = footer?.querySelector('[data-glaze-views]');
 const lastVisit = footer?.querySelector('[data-glaze-last-visit]');
 const lastVisitFlag = footer?.querySelector('[data-glaze-last-visit-flag]');
+const post = Number(presence?.dataset.glazePostId) || 0;
+const postViewsKey = 'westnote-glaze-post-views';
+
+window.addEventListener('pageshow', ({ persisted }) => {
+  if (!persisted) return;
+  let views;
+  try {
+    views = JSON.parse(sessionStorage.getItem(postViewsKey));
+  } catch {
+    return;
+  }
+  if (!Number.isSafeInteger(views?.id) || !Number.isSafeInteger(views.count)) return;
+  for (const counter of document.querySelectorAll(`[data-glaze-post-views="${views.id}"]`)) {
+    if (views.count <= Number(counter.dataset.glazeViewCount)) continue;
+    counter.dataset.glazeViewCount = String(views.count);
+    counter.querySelector('[aria-hidden="true"]:not(svg)').textContent = views.formatted;
+    counter.querySelector('.screen-reader-text').textContent = views.label;
+  }
+});
 
 if (onlineCount && globalThis.crypto?.getRandomValues) {
   const identifier = () => Array.from(crypto.getRandomValues(new Uint8Array(16)), (value) => value.toString(16).padStart(2, '0')).join('');
@@ -29,13 +48,20 @@ if (onlineCount && globalThis.crypto?.getRandomValues) {
         mode: 'same-origin',
         credentials: 'omit',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ visitor, event }),
+        body: JSON.stringify({ visitor, event, post }),
         signal: controller.signal,
       });
       if (!response.ok) throw new Error('Presence request failed');
-      const { count, views, lastVisit: recent, lastVisitFlag: flag } = await response.json();
+      const { count, views, lastVisit: recent, lastVisitFlag: flag, postViews } = await response.json();
       if (!Number.isSafeInteger(count) || count < 1) throw new Error('Invalid presence count');
       event = '';
+      if (postViews) {
+        try {
+          sessionStorage.setItem(postViewsKey, JSON.stringify(postViews));
+        } catch {
+          // The server has already recorded the view.
+        }
+      }
       const locale = document.documentElement.lang || undefined;
       onlineCount.textContent = count.toLocaleString(locale);
       if (totalViews && Number.isSafeInteger(views)) totalViews.textContent = views.toLocaleString(locale);

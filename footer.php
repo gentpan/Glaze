@@ -1,6 +1,7 @@
 <?php
 $glaze_last_visit = westnote_glaze_latest_pageview();
 $glaze_visit_flag = westnote_glaze_last_visit_flag( $glaze_last_visit );
+$glaze_article    = is_singular( 'post' ) && ! is_preview() ? get_queried_object() : null;
 ?>
 <footer class="site-footer">
 	<div class="site-footer-inner">
@@ -9,7 +10,7 @@ $glaze_visit_flag = westnote_glaze_last_visit_flag( $glaze_last_visit );
 				&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 			</p>
-			<span class="site-online" data-glaze-presence="<?php echo esc_url( rest_url( 'glaze/v1/presence' ) ); ?>" lang="zh-CN" hidden>
+			<span class="site-online" data-glaze-presence="<?php echo esc_url( rest_url( 'glaze/v1/presence' ) ); ?>"<?php if ( westnote_glaze_public_article( $glaze_article ) ) : ?> data-glaze-post-id="<?php echo esc_attr( $glaze_article->ID ); ?>"<?php endif; ?> lang="zh-CN" hidden>
 				<span data-glaze-online-count></span> 人在线
 			</span>
 			<span class="site-footer-stat" lang="zh-CN">

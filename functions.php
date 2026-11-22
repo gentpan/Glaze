@@ -145,7 +145,42 @@ function westnote_glaze_last_visit_flag( $visit ) {
 	return westnote_glaze_flag_url( $visit['country_code'] ?? '' );
 }
 
-function westnote_glaze_record_pageview( $table, $event, $now ) {
+function westnote_glaze_public_article( $post ) {
+	return $post instanceof WP_Post && 'post' === $post->post_type && 'publish' === $post->post_status && '' === $post->post_password;
+}
+
+function westnote_glaze_increment_post_views( $post_id ) {
+	global $wpdb;
+
+	// The total-views row stays locked until the pageview transaction commits.
+	$previous = $wpdb->get_var(
+		$wpdb->prepare(
+			"SELECT MAX(CAST(meta_value AS SIGNED)) FROM {$wpdb->postmeta} WHERE post_id = %d AND meta_key IN ('p1_post_views', '_feng_views')",
+			$post_id
+		)
+	);
+	if ( $wpdb->last_error ) {
+		return false;
+	}
+	$next = max( 0, (int) $previous ) + 1;
+	$updated = $wpdb->update(
+		$wpdb->postmeta,
+		array( 'meta_value' => $next ),
+		array( 'post_id' => $post_id, 'meta_key' => 'p1_post_views' ),
+		array( '%d' ),
+		array( '%d', '%s' )
+	);
+	if ( 0 !== $updated ) {
+		return false !== $updated;
+	}
+	return 1 === $wpdb->insert(
+		$wpdb->postmeta,
+		array( 'post_id' => $post_id, 'meta_key' => 'p1_post_views', 'meta_value' => $next ),
+		array( '%d', '%s', '%d' )
+	);
+}
+
+function westnote_glaze_record_pageview( $table, $event, $now, $post_id = 0 ) {
 	global $wpdb;
 
 	$schema = (int) get_option( 'westnote_glaze_pageview_schema' );
@@ -186,7 +221,12 @@ function westnote_glaze_record_pageview( $table, $event, $now ) {
 		return null;
 	}
 	$inserted = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO `{$table}` (event_id, seen) VALUES (%s, %d)", $event, $now ) );
-	if ( false === $inserted || ( 1 === $inserted && 1 !== $wpdb->query( "UPDATE {$wpdb->options} SET option_value = CAST(option_value AS UNSIGNED) + 1 WHERE option_name = 'westnote_glaze_total_pageviews'" ) ) || false === $wpdb->query( 'COMMIT' ) ) {
+	$counted = false !== $inserted;
+	if ( 1 === $inserted ) {
+		$counted = 1 === $wpdb->query( "UPDATE {$wpdb->options} SET option_value = CAST(option_value AS UNSIGNED) + 1 WHERE option_name = 'westnote_glaze_total_pageviews'" )
+			&& ( ! $post_id || westnote_glaze_increment_post_views( $post_id ) );
+	}
+	if ( ! $counted || false === $wpdb->query( 'COMMIT' ) ) {
 		$wpdb->query( 'ROLLBACK' );
 		return null;
 	}
@@ -195,6 +235,9 @@ function westnote_glaze_record_pageview( $table, $event, $now ) {
 	}
 
 	wp_cache_delete( 'westnote_glaze_total_pageviews', 'options' );
+	if ( $post_id ) {
+		wp_cache_delete( $post_id, 'post_meta' );
+	}
 	$address  = westnote_glaze_visitor_ip( $_SERVER );
 	$location = westnote_glaze_lookup_region( $address, true );
 	if ( $location ) {
@@ -262,17 +305,27 @@ function westnote_glaze_record_presence( WP_REST_Request $request ) {
 	}
 
 	$events = $wpdb->prefix . 'glaze_pageview_events';
-	if ( '' !== $event && null === westnote_glaze_record_pageview( $events, $event, $now ) ) {
+	$post_id = $request->get_param( 'post' );
+	$post_id = '' !== $event && is_int( $post_id ) && $post_id > 0 && westnote_glaze_public_article( get_post( $post_id ) ) ? $post_id : 0;
+	if ( '' !== $event && null === westnote_glaze_record_pageview( $events, $event, $now, $post_id ) ) {
 		return new WP_Error( 'glaze_pageview_unavailable', '', array( 'status' => 503 ) );
 	}
 	$latest = westnote_glaze_latest_pageview();
+	$data   = array(
+		'count'         => (int) $count,
+		'views'         => westnote_glaze_total_pageviews(),
+		'lastVisit'     => westnote_glaze_last_visit_label( $latest ),
+		'lastVisitFlag' => westnote_glaze_last_visit_flag( $latest ),
+	);
+	if ( $post_id ) {
+		$views     = westnote_glaze_archive_post_views( $post_id );
+		$formatted = number_format_i18n( $views );
+		/* translators: %s: localized number of post views. */
+		$label     = sprintf( _n( '%s view', '%s views', $views, 'glaze' ), $formatted );
+		$data['postViews'] = array( 'id' => $post_id, 'count' => $views, 'formatted' => $formatted, 'label' => $label );
+	}
 	return new WP_REST_Response(
-		array(
-			'count'         => (int) $count,
-			'views'         => westnote_glaze_total_pageviews(),
-			'lastVisit'     => westnote_glaze_last_visit_label( $latest ),
-			'lastVisitFlag' => westnote_glaze_last_visit_flag( $latest ),
-		),
+		$data,
 		200,
 		array( 'Cache-Control' => 'no-store' )
 	);
